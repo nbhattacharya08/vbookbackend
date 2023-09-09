@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const subTopicSchema = mongoose.Schema({
 	sub_title: {
 		type: String,
-		required: true,
+		
 	},
 	diagram: {
 		type: String,
@@ -30,33 +30,32 @@ const subTopicSchema = mongoose.Schema({
 const topicSchema = mongoose.Schema({
 	topic_title: {
 		type: String,
-		required: true,
+		
 	},
 	audio:{
 		type:String,
-		required:true
 	},
 	video:{
 		type:String,
-		require: true
+		
 	},
 	objective: {
 		type: String,
-		required: true,
+		
 	},
 	sub_topic: [subTopicSchema],
 });
 const chapterSchema = mongoose.Schema({
 	chapter_title: {
 		type: String,
-		required: true,
+		
 	},
 	lecture_hrs: {
 		type: Number,
 	},
 	index: {
 		type: Number,
-		required: true,
+		
 	},
 	topics: [topicSchema],
 });
@@ -65,23 +64,23 @@ const bookSchema = mongoose.Schema(
 		tags: [],
 		author: {
 			type: String,
-			required: true,
+			
 		},
 		book_title: {
 			type: String,
-			required: true,
+			
 		},
 		cover_page: {
 			type: String,
-			required: true,
+			
 		},
 		rating: {
 			type: Number,
-			required: true,
+			
 		},
 		price: {
 			type: Number,
-			required: true,
+			
 		},
 		chapters: [chapterSchema],
 	},
